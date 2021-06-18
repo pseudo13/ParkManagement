@@ -1,0 +1,4 @@
+<button (click)="simulateCars()">Simulate</button>
+<button (click)="stopSimulating()">Stop simulating</button>
+<h1>{{ parkService.parkDisplay }}</h1>
+<app-park-level [parkLevel]="i" *ngFor="let i of [0, 1, 2]"></app-park-level>

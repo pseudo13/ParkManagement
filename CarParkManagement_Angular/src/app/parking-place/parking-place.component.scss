@@ -1,0 +1,13 @@
+span {
+    width: 25px;
+    height: 40px;
+    margin: 5px 2px;
+    border: 1px solid black;
+    display: inline-block;
+    &.occupied {
+        background-color: red;
+    }
+    &.open {
+        background-color: green;
+    }
+}

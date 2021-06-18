@@ -1,0 +1,23 @@
+.park-level {
+    border: 1px solid black;
+    background-color: darkgray;
+    width: fit-content;
+    margin: 10px;
+    padding: 10px;
+}
+
+.park-place {
+    width: 25px;
+    height: 40px;
+    margin: 5px 2px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.park-place.occupied {
+    background-color: red;
+}
+
+.park-place.open {
+    background-color: green;
+}

@@ -1,0 +1,42 @@
+<script>
+function startSimulating(){
+	let reactAppContainer = document.getElementById('react-app');
+	reactAppContainer.contentWindow.postMessage('START_SIMULATING','*');
+	
+	let angularAppContainer = document.getElementById('angular-app');
+	angularAppContainer.contentWindow.postMessage('START_SIMULATING','*');
+}
+
+function stopSimulating(){
+	let reactAppContainer = document.getElementById('react-app');
+	reactAppContainer.contentWindow.postMessage('STOP_SIMULATING','*');
+	
+	let angularAppContainer = document.getElementById('angular-app');
+	angularAppContainer.contentWindow.postMessage('STOP_SIMULATING','*');
+}
+</script>
+
+<style>
+.container {
+	float: left;
+	width: 50%;
+	height:100%;
+}
+iframe{
+	width:100%;
+	height:100%;
+}
+header{
+	width:100%;
+	height:40px;
+	background: darkgray;
+}
+</style>
+<header>
+<button onclick="startSimulating()">Simulate both React & Angular</button>
+<button onclick="stopSimulating()">Stop simulating both</button>
+</header>
+<div class="container left"><iframe id="react-app" src="./public/react/index.html"></iframe></div>
+
+<div class="container right"><iframe id="angular-app" src="./public/angular/index.html"></iframe></div>
+

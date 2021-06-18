@@ -1,0 +1,5 @@
+<div class="park-level `park-${parkLevel}`">
+    <div *ngFor="let row of rows">
+        <app-parking-place *ngFor="let parkRow of row.rows" [place]="parkRow"></app-parking-place>
+    </div>
+</div>
