@@ -27,4 +27,4 @@ function remoteComponentA() {
     }
 }
 
-export remoteComponentA;
+export default remoteComponentA;
